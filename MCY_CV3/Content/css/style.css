@@ -1,0 +1,120 @@
+body {
+    background-image: url("../Images/kimon-maritz-PTkB0AvR4M0-unsplash.jpg");
+    color:lightgray;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main-box{
+    height:90vh;
+    
+}
+.scroll-box {
+    height: calc(90vh - 80px);
+    margin: 40px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color:rgb(6, 12, 18);
+}
+.my-pic {
+    background-image: url("../Images/IMG_my-pic3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+    background-position: center;
+}
+.left-menu {
+    margin: 40px 0;
+    justify-content: space-between;
+    min-height: calc(90vh - 80px);
+    background-color: rgb(6, 12, 18);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(10, 36, 53);
+    border-radius:5px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-button{
+    width:20px;
+    height:20px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:rgb(50, 95, 189);
+    border-radius: 5px;
+}
+
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover {
+        color: #00A0C6;
+        text-decoration: none;
+        cursor: pointer;
+}
+
+/*#headerSection{
+    background-image: url("Pictures/kristopher-roller-3SFgixAUnAU-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+
+}*/
+/*#headerSection .overlay{
+    background-color: rgba(0, 0,0, 0.1);
+}*/
+#headerSection .row{
+    height:100vh;
+    text-shadow: 2px 2px 10px black;
+}
+#headerSection h1 {
+    Color:white;
+}
+/*.row .my-3 {
+    border-bottom: 3px rgb(0, 170, 170) solid;
+}*/
+.nav-link{
+    transition: .5s ease;
+}
+.nav-link:hover{
+    color: whitesmoke!important;
+}
+@media (max-width: 767px) {
+
+    .pt-5 {
+        padding-top: 0px !important;
+    }
+    .main-box {
+        
+        height: 100vh;
+    }
+    .left-menu{
+        height:10vh;
+        min-height:10vh;
+        margin:0;
+    }
+    .my-pic {
+        background-image: url();
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 0%;
+        background-position: center;
+    }
+    .scroll-box {
+        height: 90vh;
+        margin: 0;
+    }
+    .nobr { hyphens: manual;
+        -webkit-hyphens: manual;
+        -ms-hyphens: manual;
+    }

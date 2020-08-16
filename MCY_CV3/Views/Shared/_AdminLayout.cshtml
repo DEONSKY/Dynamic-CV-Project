@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!--<link rel="stylesheet" href="~/bootstrap/css/bootstrap.css">-->
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/css/style.css")
+    @Styles.Render("~/Content/css/index.css")
+    @Styles.Render("~/Content/all.min.css")
+    <link rel="stylesheet" href="~/Content/css/index.css">
+
+    <title>Şehrim</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/Admin/Abilities">Abilities <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/Admin/About">About</a>
+                <a class="nav-item nav-link" href="/Admin/ComChannels">ComChannels</a>
+                <a class="nav-item nav-link" href="/Admin/Education">Education</a>
+                <a class="nav-item nav-link" href="/Admin/Hobbies">Hobbies</a>
+                <a class="nav-item nav-link" href="/Admin/Projects">Projects</a>
+                <a class="nav-item nav-link" href="/Admin/WorkExps">WorkExps</a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container px-0">
+        <div class="scroll-box">
+            @RenderBody()
+            <div class="scrollbar" id="style-7">
+                <div class="force-overflow"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

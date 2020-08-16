@@ -1,0 +1,26 @@
+﻿@model MCY_CV3.Models.Tables.Ability
+@{
+    ViewBag.Title = "AbilityUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AbilityUpdate", "Admin", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.AbilityID)
+        @Html.TextBoxFor(m => m.AbilityID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Description_EN)
+        @Html.TextBoxFor(m => m.Description_EN, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Symbol)
+        @Html.TextBoxFor(m => m.Symbol, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.ImageURL)
+        @Html.TextBoxFor(m => m.ImageURL, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">Ability Update</button>
+    </div>
+}
+

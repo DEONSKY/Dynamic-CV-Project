@@ -1,0 +1,49 @@
+﻿
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+        <!--<link rel="stylesheet" href="~/bootstrap/css/bootstrap.css">-->
+        <link rel="stylesheet" href="~/Content/css/style.css">
+        @Styles.Render("~/Content/bootstrap.min.css")
+        @Styles.Render("~/Content/css/style.css")
+        @Styles.Render("~/Content/css/index.css")
+        @Styles.Render("~/Content/all.min.css")
+        <link rel="stylesheet" href="~/Content/css/index.css">
+
+        <title>Şehrim</title>
+    </head>
+<body id="body">
+
+
+    <div class="container pt-5">
+        <div class="row justify-content-lg-center main-box" > 
+            
+            <div class="col-md-1 no-gutters justify-content-center left-menu rounded-left d-flex">
+                <div class="row my-auto justify-content-center" style="color:lightgray">
+                    <a href="#"><i class="fas fa-user fa-2x my-2 col-12 text-center"></i></a>
+                    <a href="#"><i class="fas fa-phone fa-2x my-2 col-12 text-center"></i></a>
+                    <a href="#"><i class="fas fa-code fa-2x my-2 col-12 text-center"></i></a>
+                    <a href="#"><i class="fas fa-briefcase fa-2x my-2 col-12 text-center"></i></a>
+                    <a href="#"><i class="fas fa-palette fa-2x my-2 col-12 text-center"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 my-pic rounded shadow" ></div>
+            <div class="col-md-7 scroll-box rounded-right">
+            
+                @RenderBody()
+                <div class="scrollbar" id="style-7">
+                    <div class="force-overflow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@Scripts.Render("~/Scripts/jquery-3.4.1.min.js")
+@Scripts.Render("~/Scripts/popper.min.js")
+@Scripts.Render("~/Scripts/bootstrap.min.js")
+@RenderSection("scripts", required: false)
+

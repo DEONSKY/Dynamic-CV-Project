@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Hobbies";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using MCY_CV3.Models.Context
+@using MCY_CV3.Models.Tables
+@model List<Hobby>
+
+
+<div class="row">
+    <div class="display-3 mx-auto">Hobbies</div>
+</div>
+<div>
+    <table class="table table-striped table-dark my-table" align="center">
+        <tr>
+            <td>.HobbyID</td>
+            <td>Description_TR</td>
+            <td>Description_EN</td>
+
+        </tr>
+        @foreach (var itm in Model)
+        {
+            <tr>
+                <td>@itm.HobbyID</td>
+                <td>@itm.Description_EN</td>
+            </tr>
+
+        }
+    </table>
+
+
+</div>
