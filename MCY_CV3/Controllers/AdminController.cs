@@ -16,6 +16,7 @@ namespace MCY_CV3.Controllers
 
 
         #region Ability
+        [Authorize]
         public ActionResult Abilities()
         {
 
@@ -24,12 +25,13 @@ namespace MCY_CV3.Controllers
             return View(content);
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult AbilityAdd()
         {
             return View();
         }
-
+        [Authorize]
         [HttpPost]
         public ActionResult AbilityAdd(Ability a)
         {
@@ -37,7 +39,7 @@ namespace MCY_CV3.Controllers
             db.SaveChanges();
             return RedirectToAction("Abilities");
         }
-
+        [Authorize]
         public ActionResult AbilityDelete(int id)
         {
             var content = db.Abilities.Find(id);
@@ -46,12 +48,14 @@ namespace MCY_CV3.Controllers
             return RedirectToAction("Abilities");
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult AbilityUpdate(int id)
         {
             var content = db.Abilities.Find(id);
             return View("AbilityUpdate", content);
         }
+        [Authorize]
         [HttpPost]
         public ActionResult AbilityUpdate(Ability a)
         {
@@ -64,24 +68,28 @@ namespace MCY_CV3.Controllers
         }
         #endregion
         #region About
+        [Authorize]
         public ActionResult About()
         {
             return View();
         }
         #endregion
         #region ComChannels
+        [Authorize]
         public ActionResult ComChannels()
         {
             return View();
         }
         #endregion
         #region Education
+        [Authorize]
         public ActionResult Education()
         {
             return View();
         }
         #endregion
         #region Hobbies
+        [Authorize]
         public ActionResult Hobbies()
         {
             ViewBag.Message = "Your Index2 page.";
@@ -90,12 +98,14 @@ namespace MCY_CV3.Controllers
         }
         #endregion
         #region Projects
+        [Authorize]
         public ActionResult Projects()
         {
             return View();
         }
         #endregion
         #region WorkExps
+        [Authorize]
         public ActionResult WorkExps()
         {
             return View();
