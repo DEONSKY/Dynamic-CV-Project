@@ -12,6 +12,7 @@ namespace MCY_CV3.Models.Context
         public DbSet<Ability> Abilities { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<ComChannel> ComChannels { get; set; }
+        public DbSet<Education> Education { get; set; }
         public DbSet<Hobby> Hobbies { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<WorkExp> WorkExps { get; set; }

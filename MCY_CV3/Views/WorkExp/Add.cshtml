@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <form method="post" class="form-group">
+        <div>
+            <label>Company</label>
+            <input type="text" class="form-control" name="Company" />
+        </div>
+        <div>
+            <label>Position</label>
+            <input type="text" class="form-control" name="Position" />
+        </div>
+        <div>
+            <label>Link</label>
+            <input type="date" class="form-control" name="StartDate" />
+        </div>
+        <div>
+            <label>Symbol</label>
+            <input type="date" class="form-control" name="EndDate" />
+        </div>
+        <div>
+            <button class="btn btn-primary">Add WorkExp</button>
+        </div>
+    </form>

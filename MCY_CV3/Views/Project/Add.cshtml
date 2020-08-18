@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <form method="post" class="form-group">
+        <div>
+            <label>Title</label>
+            <textarea type="text" class="form-control" name="Title_EN"></textarea>
+        </div>
+        <div>
+            <label>Description</label>
+            <textarea type="text" class="form-control" name="Description_EN"></textarea>
+        </div>
+        <div>
+            <label>Link</label>
+            <input type="text" class="form-control" name="Link" />
+        </div>
+        <div>
+            <label>ImageUrl</label>
+            <input type="text" class="form-control" name="ImageURL" />
+        </div>
+        <div>
+            <button class="btn btn-primary">Add Project</button>
+        </div>
+    </form>
+

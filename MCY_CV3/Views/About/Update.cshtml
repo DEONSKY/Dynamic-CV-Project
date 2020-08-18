@@ -1,0 +1,22 @@
+﻿@model MCY_CV3.Models.Tables.About
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "About", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ID)
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.AboutMe)
+        @Html.TextAreaFor(m => m.AboutMe, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.ImageURL)
+        @Html.TextBoxFor(m => m.ImageURL, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">About Update</button>
+    </div>
+}

@@ -1,0 +1,25 @@
+﻿@model MCY_CV3.Models.Tables.ComChannel
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "ComChannels", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ComChannelID)
+        @Html.TextBoxFor(m => m.ComChannelID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Title_EN)
+        @Html.TextBoxFor(m => m.Title_EN, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Link)
+        @Html.TextBoxFor(m => m.Link, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Symbol)
+        @Html.TextBoxFor(m => m.Symbol, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">ComChannel Update</button>
+    </div>
+}

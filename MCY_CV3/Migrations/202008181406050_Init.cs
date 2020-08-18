@@ -52,6 +52,17 @@
                 .PrimaryKey(t => t.ComChannelID);
             
             CreateTable(
+                "dbo.Educations",
+                c => new
+                    {
+                        EducationID = c.Int(nullable: false, identity: true),
+                        Description_EN = c.String(),
+                        StartDate = c.DateTime(),
+                        EndDate = c.DateTime(),
+                    })
+                .PrimaryKey(t => t.EducationID);
+            
+            CreateTable(
                 "dbo.Hobbies",
                 c => new
                     {
@@ -81,8 +92,8 @@
                         WorkExpID = c.Int(nullable: false, identity: true),
                         Company = c.String(),
                         Position = c.String(),
-                        StartDate = c.DateTime(nullable: false),
-                        EndDate = c.DateTime(nullable: false),
+                        StartDate = c.DateTime(),
+                        EndDate = c.DateTime(),
                     })
                 .PrimaryKey(t => t.WorkExpID);
             
@@ -93,6 +104,7 @@
             DropTable("dbo.WorkExps");
             DropTable("dbo.Projects");
             DropTable("dbo.Hobbies");
+            DropTable("dbo.Educations");
             DropTable("dbo.ComChannels");
             DropTable("dbo.Admins");
             DropTable("dbo.Abouts");

@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using MCY_CV3.Models.Context
+@using MCY_CV3.Models.Tables
+@model List<Project>
+
+
+
+<div class="row">
+    <div class="display-3 mx-auto">Projects</div>
+</div>
+<div class="d-block">
+
+    <div class="row">
+        <div class="col-1">ProjectID</div>
+        <div class="col-2">Title_EN</div>
+        <div class="col-4">Description_EN</div>
+        <div class="col-1">Link</div>
+        <div class="col-2">Images</div>
+    </div>
+    @if (Model != null)
+    {
+        foreach (var itm in Model)
+        {
+            <div class="row border border-info">
+                <div class="col-1">@itm.ProjectID</div>
+                <div class="col-2">@itm.Title_EN</div>
+                <div class="col-4">@itm.Description_EN</div>
+                <div class="col-1"><a href="@itm.Link">ref</a></div>
+                <div class="col-2"><img class="img-fluid" src="@itm.ImageURL" /></div>
+                <div class="col-1"><a href="/Project/Delete/@itm.ProjectID" class="btn btn-danger">Delete</a></div>
+                <div class="col-1"><a href="/Project/Update/@itm.ProjectID" class="btn btn-primary">Update</a></div>
+            </div>
+
+        }
+    }
+    else
+    {
+        <div class="row">
+            <div class="mx-auto"><h5>there is no data here</h5> </div>
+        </div>
+    }
+
+</div>
+<a href="/Project/Add" class="btn btn-success">Add Project</a>
+

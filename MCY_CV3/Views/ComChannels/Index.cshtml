@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using MCY_CV3.Models.Context
+@using MCY_CV3.Models.Tables
+@model List<ComChannel>
+
+
+
+<div class="row">
+    <div class="display-3 mx-auto">ComChannels</div>
+</div>
+<div class="d-block">
+
+    <div class="row">
+        <div class="col-1">ComChannelID</div>
+        <div class="col-5">Title</div>
+        <div class="col-2">Link</div>
+        <div class="col-2">Symbol</div>
+    </div>
+    @if (Model != null)
+    {
+        foreach (var itm in Model)
+        {
+            <div class="row border border-info">
+                <div class="col-1">@itm.ComChannelID</div>
+                <div class="col-5">@itm.Title_EN</div>
+                <div class="col-2"><a href="@itm.Link">ref</a></div>
+                <div class="col-2"><i class="@itm.Symbol"></i></div>
+                <div class="col-1"><a href="/ComChannels/Delete/@itm.ComChannelID" class="btn btn-danger">Delete</a></div>
+                <div class="col-1"><a href="/ComChannels/Update/@itm.ComChannelID" class="btn btn-primary">Update</a></div>
+            </div>
+
+        }
+    }
+    else
+    {
+        <div class="row">
+            <div class="mx-auto"><h5>there is no data here</h5> </div>
+        </div>
+    }
+
+</div>
+<a href="/ComChannels/Add" class="btn btn-success">Add ComChannel</a>

@@ -24,7 +24,7 @@ namespace MCY_CV3.Controllers
             if(info != null)
             {
                 FormsAuthentication.SetAuthCookie(info.Name, false);
-                return RedirectToAction("Abilities","Admin");
+                return RedirectToAction("Index","Abilities");
             }
             else
             {

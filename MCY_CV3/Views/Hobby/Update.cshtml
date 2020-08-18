@@ -1,0 +1,27 @@
+﻿@model MCY_CV3.Models.Tables.Hobby
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "Hobby", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.HobbyID)
+        @Html.TextBoxFor(m => m.HobbyID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Description_EN)
+        @Html.TextBoxFor(m => m.Description_EN, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Symbol)
+        @Html.TextBoxFor(m => m.Symbol, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.ImageURL)
+        @Html.TextBoxFor(m => m.ImageURL, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">Hobby Update</button>
+    </div>
+}
+

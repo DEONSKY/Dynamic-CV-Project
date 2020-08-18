@@ -13,7 +13,7 @@ namespace MCY_CV3.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202008161423366_Init"; }
+            get { return "202008181406050_Init"; }
         }
         
         string IMigrationMetadata.Source

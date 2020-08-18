@@ -1,0 +1,29 @@
+﻿
+@model MCY_CV3.Models.Tables.Project
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "Project", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ProjectID)
+        @Html.TextBoxFor(m => m.ProjectID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Title_EN)
+        @Html.TextBoxFor(m => m.Title_EN, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Description_EN)
+        @Html.TextBoxFor(m => m.Description_EN, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Link)
+        @Html.TextBoxFor(m => m.Link, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.ImageURL)
+        @Html.TextBoxFor(m => m.ImageURL, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">Project Update</button>
+    </div>
+}

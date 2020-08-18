@@ -1,0 +1,28 @@
+﻿@model MCY_CV3.Models.Tables.WorkExp
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "WorkExp", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.WorkExpID)
+        @Html.TextBoxFor(m => m.WorkExpID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Company)
+        @Html.TextBoxFor(m => m.Company, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Position)
+        @Html.TextBoxFor(m => m.Position, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.StartDate)
+        @Html.TextBoxFor(m => m.StartDate, new { @type = "date", @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.EndDate)
+        @Html.TextBoxFor(m => m.EndDate, new { @type = "date", @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">WorkExp Update</button>
+    </div>
+}

@@ -91,30 +91,30 @@ a:hover {
 }
 @media (max-width: 767px) {
 
-    .pt-5 {
-        padding-top: 0px !important;
-    }
-    .main-box {
-        
-        height: 100vh;
-    }
-    .left-menu{
-        height:10vh;
-        min-height:10vh;
-        margin:0;
-    }
-    .my-pic {
-        background-image: url();
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 0%;
-        background-position: center;
-    }
-    .scroll-box {
-        height: 90vh;
-        margin: 0;
-    }
-    .nobr { hyphens: manual;
-        -webkit-hyphens: manual;
-        -ms-hyphens: manual;
-    }
+.pt-5 {
+    padding-top: 0px !important;
+}
+.main-box {
+    
+    height: 100vh;
+}
+.left-menu{
+    height:10vh;
+    min-height:10vh;
+    margin:0;
+}
+.my-pic {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 0%;
+    background-position: center;
+}
+.scroll-box {
+    height: 90vh;
+    margin: 0;
+}
+.nobr { hyphens: manual;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+}

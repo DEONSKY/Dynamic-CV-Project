@@ -1,10 +1,10 @@
 ﻿@model MCY_CV3.Models.Tables.Ability
 @{
-    ViewBag.Title = "AbilityUpdate";
+    ViewBag.Title = "Update";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-@using (Html.BeginForm("AbilityUpdate", "Admin", FormMethod.Post))
+@using (Html.BeginForm("Update", "Abilities", FormMethod.Post))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.AbilityID)

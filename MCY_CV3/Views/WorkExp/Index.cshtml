@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+@using MCY_CV3.Models.Context
+@using MCY_CV3.Models.Tables
+@model List<WorkExp>
+
+
+
+<div class="row">
+    <div class="display-3 mx-auto">WorkExp</div>
+</div>
+<div class="d-block">
+
+    <div class="row">
+        <div class="col-1">WorkExpID</div>
+        <div class="col-3">Company</div>
+        <div class="col-2">Start Date</div>
+        <div class="col-2">Start Date</div>
+        <div class="col-2">End Date</div>
+    </div>
+    @if (Model != null)
+    {
+        foreach (var itm in Model)
+        {
+            <div class="row border border-info">
+                <div class="col-1">@itm.WorkExpID</div>
+                <div class="col-3">@itm.Company</div>
+                <div class="col-2">@itm.Position</div>
+                <div class="col-2">@if (@itm.StartDate != null) {@itm.StartDate.Value.ToShortDateString()}</div>
+                <div class="col-2">@if (@itm.EndDate != null) {@itm.EndDate.Value.ToShortDateString()}</div>
+                <div class="col-1"><a href="/WorkExp/Delete/@itm.WorkExpID" class="btn btn-danger">Delete</a></div>
+                <div class="col-1"><a href="/WorkExp/Update/@itm.WorkExpID" class="btn btn-primary">Update</a></div>
+            </div>
+
+        }
+    }
+    else
+    {
+        <div class="row">
+            <div class="mx-auto"><h5>there is no data here</h5> </div>
+        </div>
+    }
+
+</div>
+<a href="/WorkExp/Add" class="btn btn-success">Add Education</a>
