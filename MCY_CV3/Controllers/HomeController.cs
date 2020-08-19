@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MCY_CV3.Models.Context;
+using MCY_CV3.Models.Tables;
 
 namespace MCY_CV3.Controllers
 {
@@ -15,21 +16,11 @@ namespace MCY_CV3.Controllers
         {
             dynamic IndexModel = new ExpandoObject();
             IndexModel.Abilities = db.Abilities.ToList();
+            IndexModel.Abouts = db.Abouts.ToList();
+            IndexModel.Admin = db.Admin.ToList();
+            List<WorkExp> WorkExpR = db.WorkExps.OrderByDescending(x => x.StartDate).ToList();
+            IndexModel.WorkExpR = WorkExpR.First();
             return View(IndexModel);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
 
     }

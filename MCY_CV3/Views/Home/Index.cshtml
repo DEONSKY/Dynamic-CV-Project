@@ -5,6 +5,55 @@
 @using MCY_CV3.Models.Tables
 @model dynamic
 
+<div class="row my-3">
+    @foreach (var itm in Model.Abouts)
+    {
+        <div class="col-md-12 px-3 py-3">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>About Me</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 pt-2">
+                    <p>@itm.AboutMe</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<div class="row my-3">
+    @foreach (var itm in Model.Abilities)
+    {
+        <div class="col-md-6 px-3 py-3">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <i class="@itm.Symbol" style="color:cornflowerblue"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 pt-2">
+                    <h3 class="text-center">@itm.Description_EN</h3>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
 
 <div class="jumbotron bg-dark">
     <h1>ASP.NET</h1>
@@ -22,28 +71,6 @@
         </p>
         <p><a class="btn btn-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
-<div class="row">
-    @foreach (var itm in Model.Abilities)
-    {
-    <div class="col-md-4 rounded">
-        @itm.Description_EN
-        <i class="@itm.Symbol"></i>
-        <img src="@itm.ImageURL" class="img-fluid" />
-
-    </div>
-    }
-
     <div class="col-md-4">
         <h2>Get more libraries</h2>
         <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>

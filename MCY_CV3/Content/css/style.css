@@ -5,7 +5,9 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-
+row {
+    border-bottom: solid cornflowerblue 2px;
+}
 .main-box{
     height:90vh;
     
@@ -18,11 +20,18 @@ body {
     background-color:rgb(6, 12, 18);
 }
 .my-pic {
-    background-image: url("../Images/IMG_my-pic3.jpg");
+    /*background-image: url("../Images/IMG_my-pic3.jpg");*/
     background-repeat: no-repeat;
     background-size: cover;
     height:100%;
     background-position: center;
+}
+.name-d {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(6,12,18,0.7) 50%,rgba(0,0,0,0) 100%);
+    position: absolute;
+    bottom: 0;
+    height: 20vh;
+    width: 100%;
 }
 .left-menu {
     margin: 40px 0;
@@ -51,12 +60,14 @@ body {
 }
 
 a {
-    color: #0060B6;
+    color: cornflowerblue;
     text-decoration: none;
+    transition: ease 0.2s;
 }
 
 a:hover {
-        color: #00A0C6;
+        transition:ease 0.2s;
+        color:lightblue;
         text-decoration: none;
         cursor: pointer;
 }
@@ -83,38 +94,38 @@ a:hover {
 /*.row .my-3 {
     border-bottom: 3px rgb(0, 170, 170) solid;
 }*/
-.nav-link{
-    transition: .5s ease;
-}
-.nav-link:hover{
-    color: whitesmoke!important;
-}
 @media (max-width: 767px) {
 
-.pt-5 {
-    padding-top: 0px !important;
-}
-.main-box {
-    
-    height: 100vh;
-}
-.left-menu{
-    height:10vh;
-    min-height:10vh;
-    margin:0;
-}
-.my-pic {
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 0%;
-    background-position: center;
-}
-.scroll-box {
-    height: 90vh;
-    margin: 0;
-}
-.nobr { hyphens: manual;
-    -webkit-hyphens: manual;
-    -ms-hyphens: manual;
+    .pt-5 {
+        padding-top: 0px !important;
+    }
+
+    .main-box {
+        height: 100vh;
+    }
+
+    .left-menu {
+        height: 10vh;
+        min-height: 10vh;
+        margin: 0;
+    }
+
+    .my-pic {
+        background-image: url();
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 0%;
+        background-position: center;
+    }
+
+    .scroll-box {
+        height: 90vh;
+        margin: 0;
+    }
+
+    .nobr {
+        hyphens: manual;
+        -webkit-hyphens: manual;
+        -ms-hyphens: manual;
+    }
 }
