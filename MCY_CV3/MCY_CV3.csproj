@@ -183,6 +183,7 @@
     <Content Include="Content\Images\IMG_20191002_213004.jpg" />
     <Content Include="Content\Images\IMG_my-pic.jpg" />
     <Content Include="Content\Images\IMG_my-pic3.jpg" />
+    <Content Include="Content\Images\IMG_my-pic4.jpg" />
     <Content Include="Content\Images\IMG_mypic2.jpg" />
     <Content Include="Content\Images\kimon-maritz-PTkB0AvR4M0-unsplash.jpg" />
     <Content Include="Content\Pictures\bilg-ve-ben\arian-darvishi-wh-RPfR_3_M-unsplash.jpg" />
@@ -400,6 +401,8 @@
     <Content Include="Views\WorkExp\Index.cshtml" />
     <Content Include="Views\WorkExp\Add.cshtml" />
     <Content Include="Views\Education\Update.cshtml" />
+    <Content Include="Views\Home\Communication.cshtml" />
+    <Content Include="Views\Home\HomeLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
