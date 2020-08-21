@@ -4,5 +4,63 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Communication</h2>
+<div class="row my-4">
+    <div class="col-12 text-center">
+        <h1>Communication</h1>
+    </div>
+</div>
+<div class="row mt-5">
+    @foreach (var itm in Model.ComChannels)
+    {
+        if (-1 == itm.Title_EN.IndexOf("Location"))
+        {
+            <div class="col-md-6 py-1">
+                <div class="row">
+                    <div class="col-2">
+                        @if (-1 != itm.Title_EN.IndexOf("mail"))
+                        {
 
+                            <a href="mailto:@itm.Link"><i class="@itm.Symbol fa-2x"></i></a>
+                        }
+                        else if (-1 != itm.Title_EN.IndexOf("0"))
+                        {
+                            <i class="@itm.Symbol fa-2x" style="color:cornflowerblue"></i>
+                        }
+                        else
+                        {
+                            <a href="@itm.Link"><i class="@itm.Symbol fa-2x"></i></a>
+                        }
+
+                    </div>
+                    <div class="col-10">
+                        <h3 class="">@itm.Title_EN</h3>
+                    </div>
+
+
+                </div>
+            </div>
+            }
+        }
+    <div class="col-md-12 my-5">
+        <div class="row d-flex justify-content-center">
+            @if (Model.Location != null)
+            {
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-4 text-right">
+                        <a href="#"><i class="@Model.Location[0].Symbol fa-2x"></i></a>
+                    </div>
+                    <div class="col-6 text-left">
+                        <h3 class="">Location</h3>
+                    </div>
+                </div>
+            </div>
+                <div class="col-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="@Model.Location[0].Link"></iframe>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

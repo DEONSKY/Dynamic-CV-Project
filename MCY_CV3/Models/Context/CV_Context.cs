@@ -17,6 +17,7 @@ namespace MCY_CV3.Models.Context
         public DbSet<Project> Projects { get; set; }
         public DbSet<WorkExp> WorkExps { get; set; }
         public DbSet<Admin> Admin { get; set; }
+        public DbSet<TechKnow> TechKnow { get; set; }
 
     }
 }

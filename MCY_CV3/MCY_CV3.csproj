@@ -138,6 +138,7 @@
     <Compile Include="Controllers\HobbyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\TechKnowController.cs" />
     <Compile Include="Controllers\WorkExpController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,6 +146,10 @@
     <Compile Include="Migrations\202008181406050_Init.cs" />
     <Compile Include="Migrations\202008181406050_Init.designer.cs">
       <DependentUpon>202008181406050_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008211552232_TechKnow.cs" />
+    <Compile Include="Migrations\202008211552232_TechKnow.designer.cs">
+      <DependentUpon>202008211552232_TechKnow.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\CV_Context.cs" />
@@ -155,6 +160,7 @@
     <Compile Include="Models\Tables\Education.cs" />
     <Compile Include="Models\Tables\Hobby.cs" />
     <Compile Include="Models\Tables\Project.cs" />
+    <Compile Include="Models\Tables\TechKnow.cs" />
     <Compile Include="Models\Tables\WorkExp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -402,7 +408,10 @@
     <Content Include="Views\WorkExp\Add.cshtml" />
     <Content Include="Views\Education\Update.cshtml" />
     <Content Include="Views\Home\Communication.cshtml" />
-    <Content Include="Views\Home\HomeLayout.cshtml" />
+    <Content Include="Views\Home\Projects.cshtml" />
+    <Content Include="Views\TechKnow\Index.cshtml" />
+    <Content Include="Views\TechKnow\Add.cshtml" />
+    <Content Include="Views\TechKnow\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -422,6 +431,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202008181406050_Init.resx">
       <DependentUpon>202008181406050_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008211552232_TechKnow.resx">
+      <DependentUpon>202008211552232_TechKnow.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

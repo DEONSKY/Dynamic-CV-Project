@@ -27,7 +27,7 @@
                     <a href="/Home/Index"><i class="fas fa-user fa-2x my-2 col-12 text-center"></i></a>
                     <a href="/Home/Communication"><i class="fas fa-phone fa-2x my-2 col-12 text-center"></i></a>
                     <a href="#"><i class="fas fa-code fa-2x my-2 col-12 text-center"></i></a>
-                    <a href="#"><i class="fas fa-briefcase fa-2x my-2 col-12 text-center"></i></a>
+                    <a href="/Home/Projects"><i class="fas fa-briefcase fa-2x my-2 col-12 text-center"></i></a>
                     <a href="#"><i class="fas fa-palette fa-2x my-2 col-12 text-center"></i></a>
                 </div>
             </div>
@@ -39,8 +39,8 @@
                         <div class="row pt-3">
                             @foreach (var itm in Model.MainCom)
                             {
-                            <div class="col-3">
-                                @if (itm.Title_EN != "Gmail")
+                            <div class="col-3 text-center">
+                                @if (-1== itm.Title_EN.IndexOf("mail"))
                                 {
                                     <a href="@itm.Link"><i class="@itm.Symbol fa-2x"></i></a>
                                 }

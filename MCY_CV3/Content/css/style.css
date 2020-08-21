@@ -117,6 +117,7 @@ a:hover {
         background-size: cover;
         height: 0%;
         background-position: center;
+        display:none;
     }
 
     .scroll-box {

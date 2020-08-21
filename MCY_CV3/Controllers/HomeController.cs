@@ -13,20 +13,6 @@ namespace MCY_CV3.Controllers
     {
         CV_Context db = new CV_Context();
 
-        public ActionResult HomeLayout()
-        {
-            dynamic IndexModel = new ExpandoObject();
-            IndexModel.Abouts = db.Abouts.ToList();
-            IndexModel.Admin = db.Admin.ToList();
-            List<WorkExp> WorkExpR = db.WorkExps.OrderByDescending(x => x.StartDate).ToList();
-            IndexModel.WorkExpR = WorkExpR.First();
-            IndexModel.MainCom = db.ComChannels.Where(
-                x => x.Title_EN == "Youtube" ||
-                x.Title_EN == "LinkedIn" ||
-                x.Title_EN == "Github" ||
-                x.Title_EN == "Gmail").ToList();
-            return PartialView(IndexModel);
-        }
         public ActionResult Index()
         {
             dynamic IndexModel = new ExpandoObject();
@@ -46,7 +32,6 @@ namespace MCY_CV3.Controllers
         public ActionResult Communication()
         {
             dynamic IndexModel = new ExpandoObject();
-            IndexModel.Abilities = db.Abilities.ToList();
             IndexModel.Abouts = db.Abouts.ToList();
             IndexModel.Admin = db.Admin.ToList();
             List<WorkExp> WorkExpR = db.WorkExps.OrderByDescending(x => x.StartDate).ToList();
@@ -56,6 +41,24 @@ namespace MCY_CV3.Controllers
                 x.Title_EN == "LinkedIn" ||
                 x.Title_EN == "Github" ||
                 x.Title_EN == "Gmail").ToList();
+            IndexModel.ComChannels = db.ComChannels.ToList();
+            IndexModel.Location = db.ComChannels.Where(
+                x => x.Title_EN == "Location").ToList();
+            return View(IndexModel);
+        }
+        public ActionResult Projects()
+        {
+            dynamic IndexModel = new ExpandoObject();
+            IndexModel.Abouts = db.Abouts.ToList();
+            IndexModel.Admin = db.Admin.ToList();
+            List<WorkExp> WorkExpR = db.WorkExps.OrderByDescending(x => x.StartDate).ToList();
+            IndexModel.WorkExpR = WorkExpR.First();
+            IndexModel.MainCom = db.ComChannels.Where(
+                x => x.Title_EN == "Youtube" ||
+                x.Title_EN == "LinkedIn" ||
+                x.Title_EN == "Github" ||
+                x.Title_EN == "Gmail").ToList();
+            IndexModel.Projects = db.Projects.ToList();
 
             return View(IndexModel);
         }

@@ -1,0 +1,20 @@
+﻿@model MCY_CV3.Models.Tables.TechKnow
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "TechKnow", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.TechKnowID)
+        @Html.TextBoxFor(m => m.TechKnowID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Description_EN)
+        @Html.TextAreaFor(m => m.Description_EN, new { @class = "form-control" })
+        
+    </div>
+    <div>
+        <button class="btn btn-primary">Tech Know Update</button>
+    </div>
+}
