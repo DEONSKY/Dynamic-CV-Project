@@ -54,7 +54,7 @@ namespace MCY_CV3.Controllers
         {
             var content = db.Hobbies.Find(a.HobbyID);
             content.Description_EN = a.Description_EN;
-            content.Symbol = a.Symbol;
+            content.Title_EN = a.Title_EN;
             content.ImageURL = a.ImageURL;
             db.SaveChanges();
             return RedirectToAction("Index");

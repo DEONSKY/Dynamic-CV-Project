@@ -151,6 +151,14 @@
     <Compile Include="Migrations\202008211552232_TechKnow.designer.cs">
       <DependentUpon>202008211552232_TechKnow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008221408262_KnowLvl.cs" />
+    <Compile Include="Migrations\202008221408262_KnowLvl.designer.cs">
+      <DependentUpon>202008221408262_KnowLvl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008221535175_Hobby-Title.cs" />
+    <Compile Include="Migrations\202008221535175_Hobby-Title.designer.cs">
+      <DependentUpon>202008221535175_Hobby-Title.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\CV_Context.cs" />
     <Compile Include="Models\Tables\Ability.cs" />
@@ -412,6 +420,8 @@
     <Content Include="Views\TechKnow\Index.cshtml" />
     <Content Include="Views\TechKnow\Add.cshtml" />
     <Content Include="Views\TechKnow\Update.cshtml" />
+    <Content Include="Views\Home\EdcWorkExp.cshtml" />
+    <Content Include="Views\Home\Hobbies.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -434,6 +444,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008211552232_TechKnow.resx">
       <DependentUpon>202008211552232_TechKnow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008221408262_KnowLvl.resx">
+      <DependentUpon>202008221408262_KnowLvl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008221535175_Hobby-Title.resx">
+      <DependentUpon>202008221535175_Hobby-Title.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

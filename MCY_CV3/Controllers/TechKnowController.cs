@@ -54,6 +54,7 @@ namespace MCY_CV3.Controllers
         {
             var content = db.TechKnow.Find(a.TechKnowID);
             content.Description_EN= a.Description_EN;
+            content.KnowLvl = a.KnowLvl;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

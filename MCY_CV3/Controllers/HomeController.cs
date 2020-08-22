@@ -62,6 +62,40 @@ namespace MCY_CV3.Controllers
 
             return View(IndexModel);
         }
+        public ActionResult EdcWorkExp()
+        {
+            dynamic IndexModel = new ExpandoObject();
+            IndexModel.Abouts = db.Abouts.ToList();
+            IndexModel.Admin = db.Admin.ToList();
+            List<WorkExp> WorkExpR = db.WorkExps.OrderByDescending(x => x.StartDate).ToList();
+            IndexModel.WorkExpR = WorkExpR.First();
+            IndexModel.MainCom = db.ComChannels.Where(
+                x => x.Title_EN == "Youtube" ||
+                x.Title_EN == "LinkedIn" ||
+                x.Title_EN == "Github" ||
+                x.Title_EN == "Gmail").ToList();
+            IndexModel.WorkExps = db.WorkExps.OrderByDescending(x => x.StartDate).ToList();
+            IndexModel.Education = db.Education.OrderByDescending(x => x.StartDate).ToList();
+            IndexModel.TechKnow = db.TechKnow.ToList();
+
+            return View(IndexModel);
+        }
+        public ActionResult Hobbies()
+        {
+            dynamic IndexModel = new ExpandoObject();
+            IndexModel.Abouts = db.Abouts.ToList();
+            IndexModel.Admin = db.Admin.ToList();
+            List<WorkExp> WorkExpR = db.WorkExps.OrderByDescending(x => x.StartDate).ToList();
+            IndexModel.WorkExpR = WorkExpR.First();
+            IndexModel.MainCom = db.ComChannels.Where(
+                x => x.Title_EN == "Youtube" ||
+                x.Title_EN == "LinkedIn" ||
+                x.Title_EN == "Github" ||
+                x.Title_EN == "Gmail").ToList();
+            IndexModel.Hobbies = db.Hobbies.ToList();
+
+            return View(IndexModel);
+        }
 
     }
 }

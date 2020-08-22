@@ -12,7 +12,10 @@
         <br />
         @Html.LabelFor(m => m.Description_EN)
         @Html.TextAreaFor(m => m.Description_EN, new { @class = "form-control" })
-        
+        <br />
+        @Html.LabelFor(m => m.KnowLvl)
+        @Html.TextBoxFor(m => m.KnowLvl, new { @class = "form-control" })
+
     </div>
     <div>
         <button class="btn btn-primary">Tech Know Update</button>

@@ -2,25 +2,24 @@
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@using MCY_CV3.Models.Context
-@using MCY_CV3.Models.Tables
-@model dynamic
+
 
 <div class="row my-3">
     @foreach (var itm in Model.Abouts)
     {
-        <div class="col-md-12 px-3 py-3">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>About Me</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 pt-2">
-                    <p>@itm.AboutMe</p>
-                </div>
+    <div class="col-md-12 px-3 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>About Me</h1>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 pt-2">
+                <p>@itm.AboutMe</p>
+            </div>
+        </div>
+        <hr />
+    </div>
     }
 </div>
 

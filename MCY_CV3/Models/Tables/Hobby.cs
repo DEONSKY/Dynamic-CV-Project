@@ -11,7 +11,7 @@ namespace MCY_CV3.Models.Tables
         [Key]
         public int HobbyID { get; set; }
         public string Description_EN { get; set; }
-        public string Symbol { get; set; }
+        public string Title_EN { get; set; }
         //public int AboutID { get; set; }
         //public virtual About About { get; set; }
         [DataType(DataType.Url)]

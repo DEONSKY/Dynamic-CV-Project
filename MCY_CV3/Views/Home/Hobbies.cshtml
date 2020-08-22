@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Hobbies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row my-3">
+    <div class="col-12 text-center"><h2>Hobbies</h2></div>
+    @foreach (var itm in Model.Hobbies)
+    {
+    <div class="col-md-12 px-3 py-3">
+        <a>
+            <div class="row hobbies-pic unseenDIV mx-1" style="background-image:url('@Url.Content(itm.ImageURL)');">
+                <div class="col hiding px-5 py-5 mx-3 my-3" >
+                    <div class="row ">
+                        <div class="col-12">
+                            <h3 class="text-center px-4">@itm.Title_EN</h3>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-12 pt-2">
+                            <div>@itm.Description_EN</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    }
+</div>
+
+

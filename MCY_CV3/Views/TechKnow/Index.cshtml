@@ -18,6 +18,7 @@
     <div class="row">
         <div class="col-1">AbilityID</div>
         <div class="col-5">Description_EN</div>
+        <div class="col-1">KnowLvl</div>
     </div>
     @if (Model != null)
     {
@@ -26,6 +27,7 @@
             <div class="row border border-info">
                 <div class="col-1">@itm.TechKnowID</div>
                 <div class="col-5">@itm.Description_EN</div>
+                <div class="col-1">@itm.KnowLvl</div>
                 <div class="col-1"><a href="/TechKnow/Delete/@itm.TechKnowID" class="btn btn-danger">Delete</a></div>
                 <div class="col-1"><a href="/TechKnow/Update/@itm.TechKnowID" class="btn btn-primary">Update</a></div>
             </div>

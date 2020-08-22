@@ -1,9 +1,10 @@
 body {
     background-image: url("../Images/kimon-maritz-PTkB0AvR4M0-unsplash.jpg");
-    color:lightgray;
+    color: whitesmoke;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family:Verdana;
 }
 
 row {
@@ -20,13 +21,34 @@ row {
     overflow-y: auto;
     background-color:rgb(6, 12, 18);
 }
-.my-pic {
-    /*background-image: url("../Images/IMG_my-pic3.jpg");*/
+.hobbies-pic {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
     background-position: center;
+    min-height:300px;
 }
+
+.hiding {
+    opacity: 0;
+    transition: ease 0.5s;
+    background-color: rgba(12, 14, 27, 0.94);
+
+}
+
+.unseenDIV:hover > .hiding {
+    opacity: 1;
+
+    transition: ease 0.5s;
+}
+
+.my-pic {
+/*background-image: url("../Images/IMG_my-pic3.jpg");*/
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+background-position: center;
+}
+
 .name-d {
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(6,12,18,0.9) 50%);
     position: absolute;
@@ -72,6 +94,15 @@ a:hover {
         text-decoration: none;
         cursor: pointer;
 }
+.date {
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: small
+}
+hr {
+    border: 1px solid gray;
+    width: 90%;
+}
 
 /*#headerSection{
     background-image: url("Pictures/kristopher-roller-3SFgixAUnAU-unsplash.jpg");
@@ -100,7 +131,7 @@ a:hover {
     .pt-5 {
         padding-top: 0px !important;
     }
-
+    
     .main-box {
         height: 100vh;
     }

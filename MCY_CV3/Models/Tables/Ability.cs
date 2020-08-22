@@ -14,7 +14,5 @@ namespace MCY_CV3.Models.Tables
         public string Symbol { get; set; }
         //public int AboutID { get; set; }
         //public virtual About About { get; set; }
-        [DataType(DataType.Url)]
-        public string ImageURL { get; set; }
     }
 }

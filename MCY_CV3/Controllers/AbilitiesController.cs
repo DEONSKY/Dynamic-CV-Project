@@ -58,7 +58,7 @@ namespace MCY_CV3.Controllers
             var content = db.Abilities.Find(a.AbilityID);
             content.Description_EN = a.Description_EN;
             content.Symbol = a.Symbol;
-            content.ImageURL = a.ImageURL;
+
             db.SaveChanges();
             return RedirectToAction("Index");
         }

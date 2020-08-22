@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "EdcWorkExp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row my-4 pb-5">
+    <div class="col-md-12 py-4">
+        <div class="row">
+            <div class="col text-center">
+
+                    <i class="fas fa-robot fa-2x" style="color:cornflowerblue"></i>
+                    <h2 class="d-inline-block ml-1">Tech Knowledge</h2>
+                   
+
+            </div>
+
+        </div>
+    </div>
+    @foreach (var itm in Model.TechKnow)
+    {
+        <div class=" px-4 py-1 mx-1 my-1" style="background-color:rgb(76, 148, 27);border-radius:25px;"
+            @(
+                itm.KnowLvl == 0 ? "gray" :
+                itm.KnowLvl > 0 && itm.KnowLvl <= 20 ? "red" :
+                itm.KnowLvl > 20 && itm.KnowLvl <= 40 ? "yellow" :
+                itm.KnowLvl > 40 && itm.KnowLvl <= 60 ? "green" :
+                itm.KnowLvl > 60 && itm.KnowLvl <= 80 ? "blue" :
+                itm.KnowLvl > 80 && itm.KnowLvl <= 100 ? "purple":"white")
+             >
+            <h5>@itm.Description_EN</h5>
+
+        </div>
+    }
+    
+</div>
+
+<div class="row my-3" >
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-12 px-4 py-3">
+                <div class="row">
+                    <div class="col-2"><i class="fas fa-briefcase fa-2x" style="color:cornflowerblue" ></i></div>
+                    <div class="col-10"><h2>Experience</h2></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var itm in Model.WorkExps)
+            {
+                <div class="col-12 px-4 py-3">
+                    <div class="row">
+                        <div class="col-12 date">
+                            @if (@itm.StartDate != null)
+                            {@itm.StartDate.ToShortDateString()}
+                            -
+                            @if (@itm.EndDate != null)
+                            {@itm.EndDate.ToShortDateString()}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>@itm.Company - @itm.Position</h4>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-12 px-4 py-3">
+                <div class="row">
+                    <div class="col-2"><i class="fas fa-graduation-cap fa-2x" style="color:cornflowerblue"></i></div>
+                    <div class="col-10"><h2>Education</h2></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var itm in Model.Education)
+            {
+                <div class="col-12 px-4 py-3">
+                    <div class="row">
+                        <div class="col-12 date">
+                            @if (@itm.StartDate != null)
+                            {@itm.StartDate.ToShortDateString()}
+                            -
+                            @if (@itm.EndDate != null)
+                            {@itm.EndDate.ToShortDateString()}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>@itm.Description_EN</h4>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

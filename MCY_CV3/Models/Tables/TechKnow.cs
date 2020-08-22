@@ -11,5 +11,7 @@ namespace MCY_CV3.Models.Tables
         [Key]
         public int TechKnowID { get; set; }
         public string Description_EN { get; set; }
+        [Range(0, 100)]
+        public int KnowLvl { get; set; }
     }
 }
