@@ -14,7 +14,7 @@
         @Html.TextAreaFor(m => m.Description_EN, new { @class = "form-control" })
         <br />
         @Html.LabelFor(m => m.KnowLvl)
-        @Html.TextBoxFor(m => m.KnowLvl, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.KnowLvl, new { @type="number",@min="0",@max="100",@class = "form-control" })
 
     </div>
     <div>

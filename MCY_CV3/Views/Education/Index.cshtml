@@ -26,13 +26,13 @@
     {
         foreach (var itm in Model)
         {
-            <div class="row border border-info">
-                <div class="col-1">@itm.EducationID</div>
-                <div class="col-5">@itm.Description_EN</div>
-                <div class="col-2">@if (@itm.StartDate != null) {@itm.StartDate.Value.ToShortDateString()}</div>
-                <div class="col-2">@if (@itm.EndDate != null) {@itm.EndDate.Value.ToShortDateString()}</div>
-                <div class="col-1"><a href="/Education/Delete/@itm.EducationID" class="btn btn-danger">Delete</a></div>
-                <div class="col-1"><a href="/Education/Update/@itm.EducationID" class="btn btn-primary">Update</a></div>
+            <div class="row border border-info mx-1">
+                <div class="col-md-1">@itm.EducationID</div>
+                <div class="col-md-5">@itm.Description_EN</div>
+                <div class="col-md-2">@if (@itm.StartDate != null) {@itm.StartDate.Value.ToShortDateString()}</div>
+                <div class="col-md-2">@if (@itm.EndDate != null) {@itm.EndDate.Value.ToShortDateString()}</div>
+                <div class="col-md-1"><a href="/Education/Delete/@itm.EducationID" class="btn btn-danger">Delete</a></div>
+                <div class="col-md-1"><a href="/Education/Update/@itm.EducationID" class="btn btn-primary">Update</a></div>
             </div>
 
         }

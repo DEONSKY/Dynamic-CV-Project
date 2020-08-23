@@ -16,8 +16,8 @@
 <div class="d-block">
 
     <div class="row">
-        <div class="col-1">ComChannelID</div>
-        <div class="col-5">Title</div>
+        <div class="col-2">ComChannelID</div>
+        <div class="col-4">Title</div>
         <div class="col-2">Link</div>
         <div class="col-2">Symbol</div>
     </div>
@@ -25,13 +25,13 @@
     {
         foreach (var itm in Model)
         {
-            <div class="row border border-info">
-                <div class="col-1">@itm.ComChannelID</div>
-                <div class="col-5">@itm.Title_EN</div>
-                <div class="col-2"><a href="@itm.Link">ref</a></div>
-                <div class="col-2"><i class="@itm.Symbol"></i></div>
-                <div class="col-1"><a href="/ComChannels/Delete/@itm.ComChannelID" class="btn btn-danger">Delete</a></div>
-                <div class="col-1"><a href="/ComChannels/Update/@itm.ComChannelID" class="btn btn-primary">Update</a></div>
+            <div class="row border border-info mx-1">
+                <div class="col-md-2">@itm.ComChannelID</div>
+                <div class="col-md-4">@itm.Title_EN</div>
+                <div class="col-md-2"><a href="@itm.Link">ref</a></div>
+                <div class="col-md-2"><i class="@itm.Symbol"></i></div>
+                <div class="col-md-1"><a href="/ComChannels/Delete/@itm.ComChannelID" class="btn btn-danger">Delete</a></div>
+                <div class="col-md-1"><a href="/ComChannels/Update/@itm.ComChannelID" class="btn btn-primary">Update</a></div>
             </div>
 
         }

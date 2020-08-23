@@ -14,10 +14,10 @@
         @Html.TextBoxFor(m => m.Description_EN, new { @class = "form-control" })
         <br />
         @Html.LabelFor(m => m.StartDate)
-        @Html.TextBoxFor(m => m.StartDate, new { @type = "date", @class = "form-control" })
+        @Html.TextBoxFor(m => m.StartDate, "{00:yyyy-MM-dd}", new { @type = "date", @class = "form-control" })
         <br />
         @Html.LabelFor(m => m.EndDate)
-        @Html.TextBoxFor(m => m.EndDate, new { @type = "date", @class = "form-control" })
+        @Html.TextBoxFor(m => m.EndDate, "{00:yyyy-MM-dd}", new { @type = "date", @class = "form-control" })
     </div>
     <div>
         <button class="btn btn-primary">Education Update</button>

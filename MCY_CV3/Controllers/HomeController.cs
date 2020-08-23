@@ -76,7 +76,10 @@ namespace MCY_CV3.Controllers
                 x.Title_EN == "Gmail").ToList();
             IndexModel.WorkExps = db.WorkExps.OrderByDescending(x => x.StartDate).ToList();
             IndexModel.Education = db.Education.OrderByDescending(x => x.StartDate).ToList();
-            IndexModel.TechKnow = db.TechKnow.ToList();
+            IndexModel.TechKnowWondering = db.TechKnow.Where(x => x.KnowLvl == 0 ).ToList();
+            IndexModel.TechKnowBasic = db.TechKnow.Where(x => x.KnowLvl > 0 && x.KnowLvl <= 40).ToList();
+            IndexModel.TechKnowModerate = db.TechKnow.Where(x => x.KnowLvl > 40 && x.KnowLvl <= 70).ToList();
+            IndexModel.TechKnowExpert = db.TechKnow.Where(x => x.KnowLvl > 70 && x.KnowLvl <= 100).ToList();
 
             return View(IndexModel);
         }

@@ -26,14 +26,14 @@
     {
         foreach (var itm in Model)
         {
-            <div class="row border border-info">
-                <div class="col-1">@itm.ProjectID</div>
-                <div class="col-2">@itm.Title_EN</div>
-                <div class="col-4">@itm.Description_EN</div>
-                <div class="col-1"><a href="@itm.Link">ref</a></div>
-                <div class="col-2"><img class="img-fluid" src="@itm.ImageURL" /></div>
-                <div class="col-1"><a href="/Project/Delete/@itm.ProjectID" class="btn btn-danger">Delete</a></div>
-                <div class="col-1"><a href="/Project/Update/@itm.ProjectID" class="btn btn-primary">Update</a></div>
+            <div class="row border border-info mx-1">
+                <div class="col-md-1">@itm.ProjectID</div>
+                <div class="col-md-2">@itm.Title_EN</div>
+                <div class="col-md-4">@itm.Description_EN</div>
+                <div class="col-md-1"><a href="@itm.Link">ref</a></div>
+                <div class="col-md-2"><img class="img-fluid" src="@itm.ImageURL" /></div>
+                <div class="col-md-1"><a href="/Project/Delete/@itm.ProjectID" class="btn btn-danger">Delete</a></div>
+                <div class="col-md-1"><a href="/Project/Update/@itm.ProjectID" class="btn btn-primary">Update</a></div>
             </div>
 
         }

@@ -11,12 +11,12 @@
 
 
 <div class="row">
-    <div class="display-3 mx-auto">Abilities</div>
+    <div class="display-3 mx-auto">TechKnows</div>
 </div>
 <div class="d-block">
 
     <div class="row">
-        <div class="col-1">AbilityID</div>
+        <div class="col-1">TechKnowID</div>
         <div class="col-5">Description_EN</div>
         <div class="col-1">KnowLvl</div>
     </div>
@@ -25,11 +25,11 @@
         foreach (var itm in Model)
         {
             <div class="row border border-info">
-                <div class="col-1">@itm.TechKnowID</div>
-                <div class="col-5">@itm.Description_EN</div>
-                <div class="col-1">@itm.KnowLvl</div>
-                <div class="col-1"><a href="/TechKnow/Delete/@itm.TechKnowID" class="btn btn-danger">Delete</a></div>
-                <div class="col-1"><a href="/TechKnow/Update/@itm.TechKnowID" class="btn btn-primary">Update</a></div>
+                <div class="col-md-1">@itm.TechKnowID</div>
+                <div class="col-md-5">@itm.Description_EN</div>
+                <div class="col-md-1">@itm.KnowLvl</div>
+                <div class="col-md-1"><a href="/TechKnow/Delete/@itm.TechKnowID" class="btn btn-danger">Delete</a></div>
+                <div class="col-md-1"><a href="/TechKnow/Update/@itm.TechKnowID" class="btn btn-primary">Update</a></div>
             </div>
 
         }
